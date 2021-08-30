@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d1d3df0-1550-43ee-a53e-8d7fd0a0515d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/dto/UsuarioDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="5d1d3df0-1550-43ee-a53e-8d7fd0a0515d" name="Changes" comment="Paso 25">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventario/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/controllers/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/controllers/UsuarioController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +100,21 @@
       <option name="presentableId" value="Default" />
       <updated>1630346035620</updated>
     </task>
+    <task id="LOCAL-00001" summary="Paso 25">
+      <created>1630349371752</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1630349371752</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Paso 25">
+      <created>1630349488695</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1630349488695</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,5 +128,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Paso 25" />
+    <option name="LAST_COMMIT_MESSAGE" value="Paso 25" />
   </component>
 </project>
