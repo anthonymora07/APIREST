@@ -5,36 +5,30 @@ import lombok.*;
 import javax.persistence.*;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
-@Table(name = "usuarios")
+@Table(name = "departamentos")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Usuario implements Serializable {
+public class Departamento implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "nombre_completo", length = 100)
-    private String nombreCompleto;
-
-    @Column(length = 100, name = "password_encriptado")
-    private String passwordEncriptado;
-
-    @Column(length = 25, unique = true)
-    private String cedula;
+    @Column(name = "nombre", length = 50)
+    private String nombre;
 
     @Column
     private boolean estado;
 
-    @ManyToOne
-    @JoinColumn(name="departamentos_id")
-    private Departamento departamento;
-
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "departamento")
+    private List<Usuario> usuarios= new ArrayList<>();
 
     @Column(name = "fecha_registro", updatable = false)
     @Temporal(TemporalType.DATE)
@@ -46,15 +40,11 @@ public class Usuario implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date fechaModificacion;
 
-    @Column(name = "es_jefe")
-    private boolean esJefe;
-
     private static final long serialVersionUID = 1L;
 
     @PrePersist
     public void prePersist() {
         estado=true;
-        esJefe=false;
         fechaRegistro = new Date();
         fechaModificacion = new Date();
     }

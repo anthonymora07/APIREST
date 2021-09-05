@@ -63,10 +63,26 @@ public class UsuarioController {
         }
     }
 
+
     @GetMapping("/nombre/{term}")
     public ResponseEntity<?> findByNombreCompletoAproximateIgnoreCase(@PathVariable(value = "term") String term) {
         try {
             Optional<List<UsuarioDTO>> result = usuarioService.findByNombreCompletoAproximateIgnoreCase(term);
+            if (result.isPresent()) {
+                return new ResponseEntity<>(result, HttpStatus.OK);
+            } else {
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            }
+        } catch (Exception e) {
+            return new ResponseEntity<>(e, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+
+    @GetMapping("/id/{id}")
+    public ResponseEntity<?> findByDepartamentoId(@PathVariable(value = "id") Long id) {
+        try {
+            Optional<List<UsuarioDTO>> result = usuarioService.findByDepartamentoId(id);
             if (result.isPresent()) {
                 return new ResponseEntity<>(result, HttpStatus.OK);
             } else {

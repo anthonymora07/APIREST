@@ -3,7 +3,9 @@ package org.una.inventario.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.una.inventario.dto.DepartamentoDTO;
 import org.una.inventario.dto.UsuarioDTO;
+import org.una.inventario.entities.Departamento;
 import org.una.inventario.entities.Usuario;
 import org.una.inventario.exceptions.NotFoundInformationException;
 import org.una.inventario.repositories.IUsuarioRepository;
@@ -50,6 +52,15 @@ public class UsuarioServiceImplementation implements IUsuarioService {
         return Optional.ofNullable(getSavedUsuarioDTO(usuarioDTO));
 
     }
+    @Override
+    @Transactional(readOnly = true)
+    public Optional<List<UsuarioDTO>> findByDepartamentoId(Long id) {
+        List<Usuario> usuario = usuarioRepository.findByDepartamentoId(id);
+        if (usuario.isEmpty()) throw new NotFoundInformationException();
+        List<UsuarioDTO> usuarioDTO = MapperUtils.DtoListFromEntityList(usuarioRepository.findByDepartamentoId(id), UsuarioDTO.class);
+        return Optional.ofNullable(usuarioDTO);
+    }
+
 
     @Override
     @Transactional
