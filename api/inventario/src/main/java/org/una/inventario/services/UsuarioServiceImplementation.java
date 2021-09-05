@@ -22,6 +22,7 @@ public class UsuarioServiceImplementation implements IUsuarioService {
     @Transactional(readOnly = true)
     public Optional<List<UsuarioDTO>> findByNombreCompletoAproximateIgnoreCase(String nombreCompleto) {
         List<Usuario> usuarioList = usuarioRepository.findByNombreCompletoContainingIgnoreCase(nombreCompleto);
+        if (usuarioList.isEmpty()) throw new NotFoundInformationException();
         List<UsuarioDTO> usuarioDTOList = MapperUtils.DtoListFromEntityList(usuarioList, UsuarioDTO.class);
         return Optional.ofNullable(usuarioDTOList);
 
@@ -29,6 +30,7 @@ public class UsuarioServiceImplementation implements IUsuarioService {
 
     private UsuarioDTO getSavedUsuarioDTO(UsuarioDTO usuarioDTO) {
         Usuario usuario = MapperUtils.EntityFromDto(usuarioDTO, Usuario.class);
+        if (usuario.toString().isEmpty()) throw new NotFoundInformationException();
         Usuario usuarioCreated = usuarioRepository.save(usuario);
         return MapperUtils.DtoFromEntity(usuarioCreated, UsuarioDTO.class);
     }
