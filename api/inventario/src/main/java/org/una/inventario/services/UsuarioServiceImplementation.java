@@ -51,13 +51,21 @@ public class UsuarioServiceImplementation implements IUsuarioService {
 
         return Optional.ofNullable(getSavedUsuarioDTO(usuarioDTO));
 
-    }
-    @Override
+    }@Override
     @Transactional(readOnly = true)
     public Optional<List<UsuarioDTO>> findByDepartamentoId(Long id) {
         List<Usuario> usuario = usuarioRepository.findByDepartamentoId(id);
         if (usuario.isEmpty()) throw new NotFoundInformationException();
         List<UsuarioDTO> usuarioDTO = MapperUtils.DtoListFromEntityList(usuarioRepository.findByDepartamentoId(id), UsuarioDTO.class);
+        return Optional.ofNullable(usuarioDTO);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Optional<UsuarioDTO> findJefeByDepartamento(Long id) {
+        Usuario usuario = usuarioRepository.findJefeByDepartamento(id);
+        if (usuario.toString().isEmpty()) throw new NotFoundInformationException();
+        UsuarioDTO usuarioDTO = MapperUtils.DtoFromEntity(usuario, UsuarioDTO.class);
         return Optional.ofNullable(usuarioDTO);
     }
 
@@ -90,7 +98,6 @@ public class UsuarioServiceImplementation implements IUsuarioService {
 
         UsuarioDTO usuarioDTO = MapperUtils.DtoFromEntity(usuario.get(), UsuarioDTO.class);
         return Optional.ofNullable(usuarioDTO);
-
     }
 
     @Override

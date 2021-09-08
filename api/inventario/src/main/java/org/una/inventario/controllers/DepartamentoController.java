@@ -31,10 +31,19 @@ public class DepartamentoController {
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
+
     @ApiOperation(value = "Obtiene una departamento a partir de su id", response = DepartamentoDTO.class, tags = "Departamentos")
     @GetMapping("/{id}")
     public ResponseEntity<?> findById(@PathVariable(value = "id") Long id) {
         Optional<DepartamentoDTO> departamentoFound = departamentoService.findById(id);
+        return new ResponseEntity<>(departamentoFound, HttpStatus.OK);
+
+    }
+
+    @ApiOperation(value = "Obtiene una lista de departamentos a partir de su estado", response = DepartamentoDTO.class, tags = "Departamentos")
+    @GetMapping("/{estado}")
+    public ResponseEntity<?> findByEstado(@PathVariable(value = "estado") boolean estado) {
+        Optional<List<DepartamentoDTO>> departamentoFound = departamentoService.findByEstado(estado);
         return new ResponseEntity<>(departamentoFound, HttpStatus.OK);
 
     }

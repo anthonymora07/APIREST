@@ -22,6 +22,8 @@ public interface IUsuarioService {
 
     public Optional<List<UsuarioDTO>> findByDepartamentoId(Long id);
 
+    public Optional<UsuarioDTO> findJefeByDepartamento(Long id);
+
     public void delete(Long id);
 
     public void deleteAll();

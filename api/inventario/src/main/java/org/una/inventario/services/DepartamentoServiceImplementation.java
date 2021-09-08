@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.una.inventario.dto.DepartamentoDTO;
+import org.una.inventario.dto.RolDTO;
 import org.una.inventario.dto.UsuarioDTO;
 import org.una.inventario.entities.Departamento;
+import org.una.inventario.entities.Rol;
 import org.una.inventario.entities.Usuario;
 import org.una.inventario.exceptions.NotFoundInformationException;
 import org.una.inventario.repositories.IDepartamentoRepository;
@@ -72,5 +74,16 @@ public class DepartamentoServiceImplementation implements IDepartamentoService {
         List<DepartamentoDTO> departamentoDTOList = MapperUtils.DtoListFromEntityList(departamentoRepository.findAll(), DepartamentoDTO.class);
         return Optional.ofNullable(departamentoDTOList);
     }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Optional<List<DepartamentoDTO>> findByEstado(boolean estado) {
+        List<Departamento> departamentolList = departamentoRepository.findByEstado(estado);
+        if (departamentolList.isEmpty()) throw new NotFoundInformationException();
+
+        List<DepartamentoDTO> departamentoDTOList = MapperUtils.DtoListFromEntityList(departamentolList, DepartamentoDTO.class);
+        return Optional.ofNullable(departamentoDTOList);
+    }
+
 
 }

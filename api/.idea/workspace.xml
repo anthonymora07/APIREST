@@ -4,19 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52a28193-9e07-41f1-b86d-77743995e371" name="Changes" comment="Commit 40">
-      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/controllers/DepartamentoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/dto/DepartamentoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/entities/Departamento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/repositories/IDepartamentoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/DepartamentoServiceImplementation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/IDepartamentoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="52a28193-9e07-41f1-b86d-77743995e371" name="Changes" comment="Commit 47">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/controllers/RolController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/dto/RolDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/entities/Rol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/repositories/IRolRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/IRolService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/RolServiceImplementation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/controllers/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/controllers/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/controllers/DepartamentoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/controllers/DepartamentoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/dto/UsuarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/dto/UsuarioDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/entities/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/entities/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/repositories/IUsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/repositories/IUsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/DepartamentoServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/DepartamentoServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/IDepartamentoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/IDepartamentoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/IUsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/IUsuarioService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/UsuarioServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/UsuarioServiceImplementation.java" afterDir="false" />
     </list>
@@ -77,7 +78,16 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Unnamed">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.una.inventario.InventarioApplication" />
+      <module name="inventario" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="inventario [spring-boot:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -103,6 +113,10 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Maven.inventario [spring-boot:run]" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -120,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630806383211</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit 47">
+      <created>1630829850180</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1630829850180</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,9 +154,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit 40" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 40" />
+    <MESSAGE value="Commit 47" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 47" />
   </component>
 </project>
