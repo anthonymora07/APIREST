@@ -5,21 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52a28193-9e07-41f1-b86d-77743995e371" name="Changes" comment="Commit 47">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/controllers/RolController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/dto/RolDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/entities/Rol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/repositories/IRolRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/IRolService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/RolServiceImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/controllers/TransaccionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/dto/TransaccionDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/entities/Transaccion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/repositories/ITransaccionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/ITransaccionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/TransaccionServiceImplementation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/controllers/DepartamentoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/controllers/DepartamentoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/dto/UsuarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/dto/UsuarioDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/entities/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/entities/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/DepartamentoServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/DepartamentoServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/IDepartamentoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/IDepartamentoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/IUsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/IUsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/UsuarioServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/org/una/inventario/services/UsuarioServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
